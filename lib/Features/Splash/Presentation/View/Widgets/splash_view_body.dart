@@ -4,7 +4,6 @@ import 'package:bookly_app/Features/Splash/Presentation/View/Widgets/sliding_tex
 import 'package:bookly_app/const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -64,7 +63,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 1), () {
       Get.to(() => const HomeView(),
           transition: Transition.fade, duration: kTransitionDuration);
     });
