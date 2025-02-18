@@ -1,0 +1,21 @@
+import 'package:bookly_app/Features/Home/Presentation/View/widgets/best_seller_list_view_item.dart';
+import 'package:flutter/material.dart';
+
+class BestSellerListView extends StatelessWidget {
+  const BestSellerListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
+      padding: EdgeInsets.zero,
+      itemCount: 3,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child: BestSellerListViewItem(),
+        );
+      },
+    );
+  }
+}
