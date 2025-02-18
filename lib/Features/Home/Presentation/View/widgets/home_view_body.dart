@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:bookly_app/Core/utils/assets.dart';
 import 'package:bookly_app/Core/utils/styles.dart';
 import 'package:bookly_app/Features/Home/Presentation/View/widgets/custom_app_bar.dart';
