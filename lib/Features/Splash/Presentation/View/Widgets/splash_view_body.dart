@@ -1,8 +1,8 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:bookly_app/Core/utils/app_router.dart';
 import 'package:bookly_app/Core/utils/assets.dart';
-import 'package:bookly_app/Features/Home/Presentation/View/home_view.dart';
 import 'package:bookly_app/Features/Splash/Presentation/View/Widgets/sliding_text.dart';
-import 'package:bookly_app/const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
