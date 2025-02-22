@@ -1,12 +1,13 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:bookly_app/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedItem extends StatelessWidget {
   const FeaturedItem({
     super.key,
+    required this.imageUrl,
   });
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +16,9 @@ class FeaturedItem extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            color: Colors.white.withOpacity(0.5),
             image: DecorationImage(
               image: NetworkImage(
-                AssetsUse.test,
+                imageUrl,
               ),
               fit: BoxFit.cover,
             )),
