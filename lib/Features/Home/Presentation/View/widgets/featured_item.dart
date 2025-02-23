@@ -20,16 +20,6 @@ class FeaturedItem extends StatelessWidget {
         child: CachedNetworkImage(
           imageUrl: imageUrl,
           fit: BoxFit.fill,
-          placeholder: (context, url) => DotsIndicator(
-            dotsCount: 4,
-            animate: true,
-            decorator: DotsDecorator(
-              size: const Size.square(9.0),
-              activeSize: const Size(18.0, 9.0),
-              activeShape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5.0)),
-            ),
-          ),
           errorWidget: (context, url, error) => const Icon(
             Icons.error,
             size: 80,
