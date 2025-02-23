@@ -25,6 +25,8 @@ class VolumeInfo extends Equatable {
   final String? previewLink;
   final String? infoLink;
   final String? canonicalVolumeLink;
+  final double? averageRating; // ✅ Added field
+  final int? ratingsCount; // ✅ Added field
 
   const VolumeInfo({
     this.title,
@@ -46,6 +48,8 @@ class VolumeInfo extends Equatable {
     this.previewLink,
     this.infoLink,
     this.canonicalVolumeLink,
+    this.averageRating, // ✅ Added field
+    this.ratingsCount, // ✅ Added field
   });
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
@@ -78,6 +82,9 @@ class VolumeInfo extends Equatable {
         previewLink: json['previewLink'] as String?,
         infoLink: json['infoLink'] as String?,
         canonicalVolumeLink: json['canonicalVolumeLink'] as String?,
+        averageRating:
+            (json['averageRating'] as num?)?.toDouble(), // ✅ Added parsing
+        ratingsCount: json['ratingsCount'] as int?, // ✅ Added parsing
       );
 
   Map<String, dynamic> toJson() => {
@@ -101,6 +108,8 @@ class VolumeInfo extends Equatable {
         'previewLink': previewLink,
         'infoLink': infoLink,
         'canonicalVolumeLink': canonicalVolumeLink,
+        'averageRating': averageRating, // ✅ Added field
+        'ratingsCount': ratingsCount, // ✅ Added field
       };
 
   @override
@@ -125,6 +134,8 @@ class VolumeInfo extends Equatable {
       previewLink,
       infoLink,
       canonicalVolumeLink,
+      averageRating, // ✅ Added field
+      ratingsCount, // ✅ Added field
     ];
   }
 }
